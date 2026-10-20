@@ -5,6 +5,7 @@ import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
+        //keep track of number of rounds
         int rounds = 0;
         PlayingCardDeck deck = new PlayingCardDeck();
         Queue<PlayingCard> player1 = new LinkedList<>();
@@ -19,6 +20,7 @@ public class Main {
         }
         // continue playing until either player runs out of cards
         while(!player1.isEmpty() && !player2.isEmpty()) {
+            //update number of rounds
             rounds+=1;
             // stop the game in the case of an infinite loop
             if (rounds > 5000) {
